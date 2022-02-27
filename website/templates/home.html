@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<h1 class="text-center">Tabel Absen Smart Card Camera</h1>
+<!-- <ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <li class="list-group-item">
+    {{ note.data }}
+    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+  {% endfor %}
+</ul> -->
+  <table class="table table-bordered border-dark">
+    <thead>
+      <tr class="table-dark">
+        <th>No</th>
+        <th>Nama</th>
+        <th>Kode Kartu</th>
+        <th>Nama Wajah</th>
+        <th>Waktu</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for Activity in Activities %}
+      <tr class="table-sm table-light">
+          <td >{{ Activity.id }}</td>
+          <td >{{ Activity.Nama }}</td>
+          <td >{{ Activity.Kode_RFID }}</td>
+          <td >{{ Activity.Nama_Wajah }}</td>
+          <td >{{ Activity.Waktu }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+<!-- <form method="POST">
+  <textarea name="note" id="note" class="form-control"></textarea>
+  <br />
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Add Note</button>
+  </div> -->
+</form>
+{% endblock %}
